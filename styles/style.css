@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Abel);
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 
+:root{
+    font-size: min(calc(1em + 1 vw), 4em);
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -13,6 +17,7 @@ body {
 * {
     margin: 0;
     box-sizing: border-box;
+    border: 1px solid black;
     /* background-color: #d4b0c9;
     background-image: url("https://www.transparenttextures.com/patterns/psychedelic.png"); */
 }
@@ -29,7 +34,7 @@ body {
 
 .title {
 
-    font-size: 160px;
+    font-size: 10em;
     text-align: center;
     margin: 40px auto 0px;
     text-transform: uppercase;
@@ -126,26 +131,14 @@ body {
 
 
 
-
-.turn-cards-button:hover {
-    transform: translateY(-10rem) rotateY(180deg);
-    background-color: #FFF;
-    z-index: 2;
-    box-shadow: 2px 2px 2px #000;
-}
-
-
-.turn-cards-button {
-    transform: rotateY(180deg);
-
-}
-
-/* .card-face {
+/* 
+.card-face {
     display: visible;
     position: absolute;
     z-index: 2;
     backface-visibility: hidden;
-} */
+}
+ */
 
 .turned>div>.card-face {
     display: hidden;
@@ -240,6 +233,12 @@ body {
     display: visible;
 }
 
+
+
+
+
+
+
 /* 
 Hieronder staan de animaties, je kunt ze aanpassen door extra keyframes toe te voegen of de bestaande aan te passen.
 
@@ -269,7 +268,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
     0% {
         transform: translateY(0rem) rotateY(180deg);
     }
-
+ 
     25% {
         transform: translateY(-1.5rem) rotateY(180deg);
     }
@@ -281,4 +280,148 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
     100% {
         transform: translateY(0rem) rotateY(0deg);
     }
+
+
+
 }
+
+
+
+
+
+
+
+/*toggle switch*/
+
+.toggle {
+     --width: 6em;
+     --height: calc(var(--width) / 2);
+     --border-radius: calc(var(--height) / 2);
+
+     display: inline-block;
+     cursor: pointer;
+     
+}
+
+
+.toggle-fill {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background-color: #dddddd83;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.toggled {
+    background-color: #009578;
+}
+
+.toggle-input {
+    content: "";
+    position: absolute;
+    top: calc(50% - var(--height)/2);
+    left: calc(50% - var(--height));
+    height: var(--height);
+    width: var(--height);
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.on {
+    transform: translateX(var(--height));
+}
+
+
+
+
+
+
+
+
+/*responsive layout*/
+
+/*smartphone*/
+@media (max-width: 500px) {
+   body {
+    background-color: hotpink;
+   }
+
+   .title{
+    font-size: smaller;
+   }
+
+   .toggle{
+    width: 3em;
+   }
+
+   .cards-container{
+    background-color: grey;
+    overflow-x: scroll;
+    }
+
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*tablet*/
+@media (min-width: 500px) {
+
+    body {
+     background-color: green;
+    }
+
+    .cards-container{
+    background-color: grey;
+    }
+
+ }
+
+
+
+/*laptop*/
+@media (min-width: 1000px) {
+    body {
+     background-color: royalblue;
+    }
+ }
+
+
+
+/*desktopscherm*/
+@media (min-width: 2000px) {
+    body {
+     background-color: rebeccapurple;
+    }
+ }
