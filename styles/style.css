@@ -231,7 +231,6 @@ header {
   justify-content: center;
   display: block;
   position: relative;
-
 }
 
 .button-front-blue {
@@ -257,7 +256,6 @@ header {
   justify-content: center;
   display: block;
   position: relative;
-
 }
 
 .button-front-orange {
@@ -284,7 +282,6 @@ header {
     position: relative;
     border-radius: 100%;
     box-shadow:0 0 3px 3px rgba(0, 0, 0, 0.167);
-
 }
 
 .card:hover {
@@ -313,12 +310,10 @@ header {
     display: block;
 }
 
-
 .face-up {
     animation-name: turn-to-front;
     animation-duration: 0.5s;
     display: visible;
-
 }
 
 /* 
