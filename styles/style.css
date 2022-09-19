@@ -3,6 +3,7 @@
 
 :root{
     font-size: min(calc(1em + 1 vw), 4em);
+    --right: calc(vw-30%);
 }
 
 body {
@@ -160,6 +161,10 @@ body {
     display: block;
 }
 
+.card:nth-of-type(1) {
+    margin-left: 0;
+}
+
 .card {
     width: 13em;
     height: calc(13rem * 768 / 479);
@@ -297,7 +302,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
      --width: 6em;
      --height: calc(var(--width) / 2);
      --border-radius: calc(var(--height) / 2);
-
+        align-self: right;
+        
+        margin-right: var(--right);
+        margin-left: calc(vw - var(--width) - var(--right));
      display: inline-block;
      cursor: pointer;
      
@@ -352,38 +360,24 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
    }
 
    .title{
-    font-size: smaller;
+    font-size: 3em;
    }
 
    .toggle{
-    width: 3em;
+    --width: 4em;
+    
    }
 
    .cards-container{
     background-color: grey;
-    overflow-x: scroll;
+    overflow-x: scroll; 
+    margin-bottom: -10EM;
+    height: calc((13rem * 768 / 479)- 10em + 7rem);
     }
 
+    
 }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -404,6 +398,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
 
     .cards-container{
     background-color: grey;
+    align-self: bottom;
+    overflow-x: scroll;
     }
 
  }
