@@ -11,7 +11,7 @@ async function turnCards() {
 
     card.classList.toggle("turned");
     card.classList.toggle("face-up");
-    
+
     // Wacht 100 milliseconden voordat het doorgaat naar de volgende kaart
     await delay(100);
   }
