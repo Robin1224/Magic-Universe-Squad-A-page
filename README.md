@@ -32,9 +32,9 @@
 
 - code:
  HTML,
- CSS,
- JavaScript en
- Tribe API 
+ CSS en 
+ JavaScript 
+ 
 
 
 - Tools:
