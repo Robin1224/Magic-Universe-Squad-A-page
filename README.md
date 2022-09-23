@@ -25,7 +25,7 @@
 
 
 
-* met live link
+* http://magicuniverse.student.fdnd.nl/
 
 
 <h2>Kenmerken</h2>
