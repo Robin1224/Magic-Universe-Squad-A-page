@@ -31,8 +31,9 @@
 <h2>Kenmerken</h2>
 
 - code:
- HTML
- CSSJavaScript
+ HTML,
+ CSS,
+ JavaScript en
  Tribe API 
 
 
